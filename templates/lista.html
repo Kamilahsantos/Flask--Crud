@@ -1,0 +1,23 @@
+{% extends "template.html" %}
+{% block conteudo %}
+    <table class="table table-striped table-responsive table-bordered">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Espécie</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pokemon in pokemons  %}
+            
+                        <tr>
+                            <td>{{ pokemon.nome }}</td>
+                            <td>{{ pokemon.especie }}</td>
+                            <td>{{ pokemon.tipo }}</td>
+                        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
