@@ -1,4 +1,5 @@
 {% extends "template.html" %}
+<!--criamos um bloco de conteúdo a ser interpretadopeo python-->
 {% block conteudo %}
     <table class="table table-striped table-responsive table-bordered">
         <thead>
@@ -9,15 +10,18 @@
             </tr>
         </thead>
         <tbody>
+            <!--criamos uma estrutura de repetição com o Jinja2 para preencher nossa tabela com os dados dos pokemons-->
             {% for pokemon in pokemons  %}
             
                         <tr>
                             <td>{{ pokemon.nome }}</td>
                             <td>{{ pokemon.especie }}</td>
                             <td>{{ pokemon.tipo }}</td>
+                            <!--acessamos os atributos nome, espécie e tipo de cada pokemon-->
                         </tr>
         {% endfor %}
+        <!--encerramos a estrutura de repetição-->
         </tbody>
     </table>
 {% endblock %}
-
+<!--encerramos o bloco de código a ser interpretado pelo python-->
