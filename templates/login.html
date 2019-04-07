@@ -8,14 +8,20 @@
   </head>
   <body>
     <div class="container">
+        <!--criamos um container que vai exibir as mensagens de alerta-->
         {% with messages = get_flashed_messages() %}
             {% if messages %}
+            <!--condição para as mensagens-->
                 <ul id="messages" class="list-unstyled">
+                    <!--criamos um laço de repetição para essas mensagens de alerta-->
                 {% for message in messages %}
                     <li class="alert alert-success">{{ message }}</li>
+                    <!--chamada da mensagem-->
                 {% endfor %}
+                <!--fim do for-->
                 </ul>
             {% endif %}
+            <!--fim do if-->
         {% endwith %}
 
         <h1>Faça seu login</h1>
