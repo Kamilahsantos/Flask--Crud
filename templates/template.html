@@ -8,16 +8,19 @@
   </head>
   <body>
     <div class="container">
+        <!--cria container onde as mensagens serão exibidas-->
         {% with messages = get_flashed_messages() %}
             {% if messages %}
+            <!--condição para exibição das mensagens-->
                 <ul id="messages" class="list-unstyled">
+                    <!--laço e repetição para exibição das mensagens-->
                 {% for message in messages %}
                     <li class="alert alert-success">{{ message }}</li>
                 {% endfor %}
                 </ul>
             {% endif %}
         {% endwith %}
-
+                <!--fim dos laços-->
         <div class="page-header">
             <h1>{{ titulo }}</h1>
         </div>
