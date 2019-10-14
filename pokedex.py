@@ -56,7 +56,7 @@ def index():
 def novo():
     if 'usuario_logado' not in session or session['usuario_logado'] == None:
         return redirect(url_for('login', proxima=url_for('novo')))
-        return render_template('novo.html', titulo='Novo Pokemon')
+    return render_template('novo.html', titulo='Novo Pokemon')
         #renderiza o template novo
 
 #configuração da rpta criar que usa o método post para enviar dados dos nossos pokemons
